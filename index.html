@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMART OP Interface</title>
     <script src="./sync.js"></script>
-    
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href=" 	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
     <script>
         let sync = null;
@@ -79,8 +79,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            color: rgb(122, 122, 122);
+            background-color: #012438;
+            color: #e0e0e0;
         }
         .header-content {
             display: flex;
@@ -95,12 +95,24 @@
         .card-body .form-group {
             margin-bottom: 15px;
         }
+        .card{
+            background-color: #023756;
+            border-radius: none;
+            color: #e0e0e0;
+        }
+        .btn{
+            background-color: #0091e5;
+            border-color: #023756;
+            color: #e0e0e0;
+            border-radius: 0;
+        }
     </style>
 </head>
-<body id="container">
-    <div class="container">
+<body >
+    <div class="container-fluid">
+        
         <div class="header-content">
-            <img src="https://assets-global.website-files.com/6392febc629df3354256a941/63ebaacc76c676397ad3c096_wilddesign-logo-white.svg" alt="Logo" style="height: 50px;">
+            <img src="logo.webp" alt="Logo" style="height: 100px;">
             <div>
                 <h1>SMART OP</h1>
                 <p>Temperature: <span id="tempShow">22°C</span></p>
@@ -110,8 +122,12 @@
             <div class="card-body">
                 <h5 class="card-title">Beleuchtung</h5>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="beleuchtungToggle" onchange="updateMyState()">
-                    <label class="form-check-label" for="beleuchtungToggle">On/Off</label>
+                      <!-- Rounded switch -->
+                      <label class="form-check-label" for="beleuchtungToggle">On/Off</label>
+                      <label class="switch">
+                        <input type="checkbox" class="form-check-input" id="beleuchtungToggle" onchange="updateMyState()">
+                        <span class="slider"></span>
+                      </label>
                 </div>
                 <div class="form-group">
                     <label for="hueRange">Hue</label>
@@ -123,8 +139,12 @@
             <div class="card-body">
                 <h5 class="card-title">Operationsumfeld</h5>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="operationsumfeldToggle" onchange="updateMyState()">
-                    <label class="form-check-label" for="operationsumfeldToggle">On/Off</label>
+                     <!-- Rounded switch -->
+                     <label class="form-check-label" for="operationsumfeldToggle">On/Off</label>
+                     <label class="switch">
+                        <input type="checkbox" class="form-check-input" id="operationsumfeldToggle" onchange="updateMyState()">
+                       <span class="slider"></span>
+                     </label>
                 </div>
             </div>
         </div>
