@@ -18,6 +18,7 @@
             document.getElementById('bedValue').value = state.bedHeight || 90;
             document.getElementById('hueRange').value = state.hueRange || 20;
             document.getElementById('temperatureValue').value = state.temp || 22;
+            document.getElementById('tempShow').innerText = state.temp + "°C";
 
         }
 
@@ -101,7 +102,7 @@
             <img src="https://assets-global.website-files.com/6392febc629df3354256a941/63ebaacc76c676397ad3c096_wilddesign-logo-white.svg" alt="Logo" style="height: 50px;">
             <div>
                 <h1>SMART OP</h1>
-                <p>Temperature: 22°C</p>
+                <p>Temperature: <span id="tempShow">22°C</span></p>
             </div>
         </div>
         <div class="card mb-3">
